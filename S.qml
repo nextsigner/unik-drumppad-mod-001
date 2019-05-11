@@ -10,14 +10,17 @@ Item {
     property bool showFailTools: false
 
     Column{
-        spacing: app.fs*0.1
+        spacing: app.fs
         anchors.centerIn: r
         width: flickableSetSil.width
-        height: r.height
+        height: r.height-app.fs*2
+        Sequencer{}
+        Sequencer{}
+        Sequencer{}
         Flickable{
             id: flickableSetSil
             width: gridSil.width
-            height: gridSil.height+app.fs*4
+            height: gridSil.height+app.fs*2
             //anchors.centerIn: r
             contentWidth: gridSil.width
             contentHeight: gridSil.height
@@ -54,9 +57,6 @@ Item {
                 }
             }
         }
-        Sequencer{}
-        Sequencer{}
-        Sequencer{}
     }
     Timer{
         id: tLoadSils
